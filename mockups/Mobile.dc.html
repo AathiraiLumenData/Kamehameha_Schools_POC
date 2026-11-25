@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mobile Genie chat</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Inter',system-ui,sans-serif;color:#15181C}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="width:390px;height:844px;box-sizing:border-box;display:flex;flex-direction:column;background:#F6F6F3;font-family:'Inter',system-ui,sans-serif;color:#15181C;overflow:hidden">
+
+  <header style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 8px 8px 12px;background:#FFFFFF;border-bottom:1px solid #E3E3DD">
+    <button aria-label="Open chats" style="width:44px;height:44px;border:0;background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15181C" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div style="flex:1;min-width:0;display:flex;flex-direction:column;align-items:center">
+      <span style="font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%">Admitted students: outcomes</span>
+      <span style="font-size:12px;color:#5A606A">Student Journey Insights</span>
+    </div>
+    <button aria-label="New chat" style="width:44px;height:44px;border:0;background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15181C" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+    </button>
+  </header>
+
+  <div style="flex:1;min-height:0;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:16px">
+
+    <div style="align-self:flex-end;max-width:300px;padding:10px 14px;border-radius:16px 16px 4px 16px;background:#15181C;color:#FFFFFF;font-size:15px;line-height:1.5">
+      What share of students admitted in each school year are still enrolled or have graduated?
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <p style="margin:0;font-size:15px;line-height:1.6">Older entry cohorts have mostly graduated. The share who left before graduating stays between 18% and 24%.</p>
+      <div style="padding:10px 12px;border-radius:10px;background:#FFFFFF;border:1px solid #E3E3DD;font-size:13px;line-height:1.5;color:#5A606A">
+        <span style="font-weight:500;color:#15181C">How Genie read this:</span> share of admitted students by entry year who graduated or are enrolled now.
+      </div>
+
+      <section style="background:#FFFFFF;border:1px solid #E3E3DD;border-radius:14px;overflow:hidden">
+        <div style="display:flex;flex-direction:column;gap:10px;padding:12px 14px;border-bottom:1px solid #E3E3DD">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+            <span style="font-size:14px;font-weight:600">Outcome by entry year</span>
+            <span style="padding:3px 8px;border-radius:999px;background:#FFF1D6;color:#6B4500;font-size:11px;font-weight:500">Mockup values</span>
+          </div>
+          <div style="display:flex;padding:3px;border-radius:10px;background:#F6F6F3;border:1px solid #E3E3DD">
+            <button style="flex:1;min-height:36px;border:0;border-radius:7px;background:#FFFFFF;box-shadow:0 1px 2px rgba(0,0,0,.12);font-size:13px;font-weight:500;color:#15181C">Chart</button>
+            <button style="flex:1;min-height:36px;border:0;border-radius:7px;background:transparent;font-size:13px;color:#5A606A">Table</button>
+            <button style="flex:1;min-height:36px;border:0;border-radius:7px;background:transparent;font-size:13px;color:#5A606A">SQL</button>
+          </div>
+        </div>
+
+        <div style="padding:14px;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:#5A606A">
+            <span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#0B6E6E"></span>Graduated</span>
+            <span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#7DA7A3"></span>Enrolled</span>
+            <span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#C9CDD2"></span>Left</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:13px">
+            <div style="display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between"><span style="font-weight:500">2016-17</span><span style="color:#5A606A">n = 412</span></div><div style="display:flex;height:24px;border-radius:4px;overflow:hidden"><div style="width:74%;background:#0B6E6E;color:#FFFFFF;font-size:12px;font-weight:500;display:flex;align-items:center;padding-left:8px">74%</div><div style="width:2%;background:#7DA7A3"></div><div style="width:24%;background:#C9CDD2;font-size:12px;display:flex;align-items:center;padding-left:6px">24%</div></div></div>
+            <div style="display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between"><span style="font-weight:500">2017-18</span><span style="color:#5A606A">n = 398</span></div><div style="display:flex;height:24px;border-radius:4px;overflow:hidden"><div style="width:62%;background:#0B6E6E;color:#FFFFFF;font-size:12px;font-weight:500;display:flex;align-items:center;padding-left:8px">62%</div><div style="width:15%;background:#7DA7A3;font-size:12px;display:flex;align-items:center;padding-left:6px">15%</div><div style="width:23%;background:#C9CDD2;font-size:12px;display:flex;align-items:center;padding-left:6px">23%</div></div></div>
+            <div style="display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between"><span style="font-weight:500">2018-19</span><span style="color:#5A606A">n = 405</span></div><div style="display:flex;height:24px;border-radius:4px;overflow:hidden"><div style="width:41%;background:#0B6E6E;color:#FFFFFF;font-size:12px;font-weight:500;display:flex;align-items:center;padding-left:8px">41%</div><div style="width:37%;background:#7DA7A3;font-size:12px;display:flex;align-items:center;padding-left:6px">37%</div><div style="width:22%;background:#C9CDD2;font-size:12px;display:flex;align-items:center;padding-left:6px">22%</div></div></div>
+            <div style="display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between"><span style="font-weight:500">2019-20</span><span style="color:#5A606A">n = 421</span></div><div style="display:flex;height:24px;border-radius:4px;overflow:hidden"><div style="width:18%;background:#0B6E6E;color:#FFFFFF;font-size:12px;font-weight:500;display:flex;align-items:center;padding-left:6px">18%</div><div style="width:62%;background:#7DA7A3;font-size:12px;display:flex;align-items:center;padding-left:6px">62%</div><div style="width:20%;background:#C9CDD2;font-size:12px;display:flex;align-items:center;padding-left:6px">20%</div></div></div>
+            <div style="display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between"><span style="font-weight:500">2020-21</span><span style="color:#5A606A">n = 430</span></div><div style="display:flex;height:24px;border-radius:4px;overflow:hidden"><div style="width:6%;background:#0B6E6E"></div><div style="width:76%;background:#7DA7A3;font-size:12px;display:flex;align-items:center;padding-left:6px">76%</div><div style="width:18%;background:#C9CDD2;font-size:12px;display:flex;align-items:center;padding-left:6px">18%</div></div></div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 8px 6px 14px;border-top:1px solid #E3E3DD;background:#FBFBF9;font-size:12px;color:#5A606A">
+          <span>2 tables · 5 rows · 3.4 s</span>
+          <div style="display:flex">
+            <button aria-label="Good answer" style="width:44px;height:44px;border:0;background:transparent;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15181C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11v9H4v-9h3zm0 0 4-8c1.7 0 3 1.3 3 3v3h5.5a2 2 0 0 1 2 2.3l-1.2 7a2 2 0 0 1-2 1.7H7"/></svg></button>
+            <button aria-label="Bad answer" style="width:44px;height:44px;border:0;background:transparent;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15181C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 13V4h3v9h-3zm0 0-4 8c-1.7 0-3-1.3-3-3v-3H4.5a2 2 0 0 1-2-2.3l1.2-7a2 2 0 0 1 2-1.7H17"/></svg></button>
+            <button aria-label="More actions" style="width:44px;height:44px;border:0;background:transparent;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="#15181C" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button>
+          </div>
+        </div>
+      </section>
+
+      <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:2px">
+        <button style="flex:0 0 auto;min-height:44px;padding:0 14px;border:1px solid #D4D4CC;border-radius:999px;background:#FFFFFF;font-size:14px;color:#15181C;white-space:nowrap">Break this down by campus</button>
+        <button style="flex:0 0 auto;min-height:44px;padding:0 14px;border:1px solid #D4D4CC;border-radius:999px;background:#FFFFFF;font-size:14px;color:#15181C;white-space:nowrap">Which entry grades exit most?</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="flex:0 0 auto;padding:10px 12px 16px;background:#F6F6F3;border-top:1px solid #E3E3DD">
+    <div style="display:flex;align-items:center;gap:8px;padding:6px 6px 6px 14px;background:#FFFFFF;border:1px solid #BFC3C9;border-radius:14px">
+      <label for="qm" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Ask a follow-up</label>
+      <input id="qm" type="text" placeholder="Ask a follow-up" style="flex:1;min-width:0;min-height:44px;border:0;outline:0;background:transparent;font-family:inherit;font-size:15px;color:#15181C">
+      <button aria-label="Send" style="width:44px;height:44px;border:0;border-radius:10px;background:#0B6E6E;display:flex;align-items:center;justify-content:center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
